@@ -1,6 +1,8 @@
 {
-    "explorer.fileNesting.enabled": true,
-    "explorer.fileNesting.patterns": {
-        "*.ts": "${capture}.test.ts,${capture}.input"
-    }
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
+    "*.ts": "${capture}.test.ts,${capture}.input"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true
 }
