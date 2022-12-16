@@ -1,14 +1,16 @@
 import { day05 } from "./day05"
-import {describe, test, expect } from "@jest/globals"
+import { describe, test, expect } from "@jest/globals"
 
 describe("Day01", () => {
     test("part 1", () => {
         expect(day05.part1(input)).toEqual("CMZ")
     })
+    test("part 2", () => {
+        expect(day05.part2(input)).toEqual("MCD")
+    })
 })
 
-const input =
-`    [D]    
+const input = `    [D]    
 [N] [C]    
 [Z] [M] [P]
  1   2   3 
