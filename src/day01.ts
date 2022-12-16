@@ -1,3 +1,5 @@
+import { sum } from "./utils"
+
 export const day01 = {
     part1: (input: string): string => Math.max(...getElves(input)).toString(),
     part2: (input: string): string => {
@@ -6,7 +8,6 @@ export const day01 = {
         return elves.slice(-3).reduce(sum).toString()
     },
 }
-const sum = (prev: number, current: number): number => prev + current
 function getElves(input: string) {
     return input.split("\n\n").map(elfString =>
         elfString

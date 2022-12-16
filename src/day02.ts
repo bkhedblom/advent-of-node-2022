@@ -1,3 +1,5 @@
+import { sum } from "./utils"
+
 const [loss, draw, win] = [0, 3, 6]
 
 type MoveName = "rock" | "paper" | "scissors"
@@ -87,7 +89,7 @@ const generalSolver = (
         .split("\n")
         .filter(x => !!x)
         .map(roundsolver)
-        .reduce((a, b) => a + b)
+        .reduce(sum)
         .toString()
 
 export const day02 = {
