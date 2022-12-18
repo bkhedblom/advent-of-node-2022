@@ -1,3 +1,5 @@
+//Don't forget to add to getSolver.ts
+
 const generalSolver = (input: string) => {
     return ""
 }
