@@ -1,7 +1,7 @@
 import { day01 } from "./day01"
 import { describe, test, expect } from "@jest/globals"
 
-describe("Day01", () => {
+describe("Day 1", () => {
     test("part 1", () => {
         expect(day01.part1(input)).toEqual("24000")
     })
