@@ -84,13 +84,7 @@ const asMove = (movestring: string): Move => {
 const generalSolver = (
     input: string,
     roundsolver: (round: string) => number,
-): string =>
-    input
-        .split("\n")
-        .filter(x => !!x)
-        .map(roundsolver)
-        .reduce(sum)
-        .toString()
+): string => input.split("\n").map(roundsolver).reduce(sum).toString()
 
 export const day02 = {
     part1: (input: string): string =>

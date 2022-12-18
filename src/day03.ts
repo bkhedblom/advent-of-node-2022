@@ -31,7 +31,7 @@ export const day03 = {
             .reduce(sum)
             .toString(),
     part2: (input: string): string => {
-        const rucksacks = input.split("\n").filter(r => !!r)
+        const rucksacks = input.split("\n")
         let priority = 0
         while (rucksacks.length) {
             const group = rucksacks.splice(0, 3)

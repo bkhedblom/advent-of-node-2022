@@ -43,13 +43,11 @@ const generalSolver = (
 
     const instructions = inputblocks[1].split("\n")
     const instructionRegexp = /move (\d+) from (\d+) to (\d+)/
-    instructions
-        .filter(line => !!line)
-        .forEach(line => {
-            const match = line.match(instructionRegexp)
-            if (!match) throw Error(`Couldn't parse instruction: ${line}`)
-            const [count, from, to] = match.slice(1, 4).map(s => +s)
-            move(count, stacks, from, to)
-        })
+    instructions.forEach(line => {
+        const match = line.match(instructionRegexp)
+        if (!match) throw Error(`Couldn't parse instruction: ${line}`)
+        const [count, from, to] = match.slice(1, 4).map(s => +s)
+        move(count, stacks, from, to)
+    })
     return stacks.flatMap(v => v[v.length - 1]).join("")
 }
